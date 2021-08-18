@@ -1,0 +1,19 @@
+{
+    "name": "govind/saga",
+    "description": "A test project",
+    "authors": [
+        {
+            "name": "Govind",
+            "email": "govindkumar131989@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "core\\": "core/"
+        }
+    }
+}
