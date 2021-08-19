@@ -11,8 +11,6 @@ use Exception;
 class UserController extends Controller
 {
 
-    public $layout = 'main';
-
     public function create(Request $request)
     {
         $model = new User();
@@ -30,7 +28,6 @@ class UserController extends Controller
             'model' => $model
         ]);
 
-        // return $this->render('user/create');
     }
 
     public function index(Request $request)
@@ -62,7 +59,7 @@ class UserController extends Controller
             }
         }
         
-        return $this->render('user/create', [
+        return $this->render('user/update', [
             'model' => $model
         ]);
 

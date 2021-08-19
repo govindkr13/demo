@@ -8,8 +8,6 @@ $this->title = 'Users'
     <tr>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>DOB</th>
-        <th>Contact No</th>
         <th>Action</th>
     </tr>
 
@@ -20,8 +18,6 @@ $this->title = 'Users'
             <tr>
                 <td><?= $user->first_name ?></td>
                 <td><?= $user->last_name ?></td>
-                <td><?= $user->dob ?></td>
-                <td><?= $user->contact_no ?></td>
                 <td>
                     <a href="/user/update?id=<?= $user->id ?>">Edit</a>
                     <a href="/user/delete?id=<?= $user->id ?>" onclick="return confirm('Are you sure, you want to delte this record?')">Delete</a>

@@ -91,8 +91,12 @@ abstract class Model
         $this->errors[$attribute][] = $message;
     }
 
-    public function hasError($attribute)
+    public function hasError($attribute, $first = false)
     {
+        if ($first) {
+            return $this->errors[$attribute][0] ?? false;
+        }
+
         return $this->errors[$attribute] ?? false;
     }
 
@@ -146,7 +150,7 @@ abstract class Model
         // die;
         $statement->execute();
         return true;
-        
+
         // $sql = "UPDATE {$tableName} SET " . implode(",", $attributes) . " WHERE id=:id";
         // $stmt= $pdo->prepare($sql);
         // $stmt->execute($data);
@@ -164,7 +168,7 @@ abstract class Model
         $sql = implode("AND", array_map(function ($attr) {
             return "$attr = :$attr";
         }, $attributes));
-        
+
         $statement = self::prepare("SELECT * FROM $tableName WHERE $sql");
         foreach ($where as $key => $item) {
             $statement->bindValue(":$key", $item);

@@ -1,38 +1,42 @@
 <?php
 
-$this->title = 'Users'
+$this->title = 'courses'
 
 ?>
 
 <table>
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>DOB</th>
-        <th>Contact No</th>
+        <th>Course Name</th>
+     
         <th>Action</th>
     </tr>
 
 
-    <?php if (!empty($users)) : ?>
+    <?php if (!empty($courses)) : ?>
 
-        <?php foreach ($users as $user) : ?>
+        <?php foreach ($courses as $course) : ?>
             <tr>
-                <td><?=$user->first_name?></td>
-                <td><?=$user->last_name?></td>
-                <td><?=$user->dob?></td>
-                <td><?=$user->contact_no?></td>
+                <td><?= $course->name ?></td>
+                
+               
                 <td>
-                    <a href="/user/update?id=<?=$user->id?>">Edit</a>
-                    <a href="/user/delete?id=<?=$user->id?>">Delete</a>
+                    <a href="/course/update?id=<?= $course->id ?>">Edit</a>
+                    <a href="/course/delete?id=<?= $course->id ?>" onclick="return confirm('Are you sure, you want to delte this record?')">Delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>
 
     <?php else : ?>
         <tr>
-            <td colspan="4">No Result Found</td>
+            <td colspan="2">No Result Found</td>
         </tr>
     <?php endif ?>
 
 </table>
+
+<div class="pagination">
+    
+    <?php for ($i = 1; $i <= $pages; $i++) : ?>
+        <a href="/course?page=<?= $i ?>"><?= $i ?></a>
+    <?php endfor; ?>
+</div>

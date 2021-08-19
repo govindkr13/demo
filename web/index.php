@@ -23,7 +23,7 @@ $app->router->get('/user/create', [ UserController::class, 'create']);
 $app->router->post('/user/create', [ UserController::class, 'create']);
 $app->router->get('/user/update', [ UserController::class, 'update']);
 $app->router->post('/user/update', [ UserController::class, 'update']);
-$app->router->get('/user/delete', [ UserController::class, 'delete']);
+$app->router->get('/user/delete', [ UserController::class, 'delete  ']);
 
 
 $app->run();
