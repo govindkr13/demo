@@ -1,0 +1,63 @@
+body {
+    width: 600px;
+    margin: auto;
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+form {
+    margin: 50px 0px;
+}
+.error {
+    display: block;
+    margin: 5px 0px 0px 160px;
+    font-size: 13px;
+    color: #f00;
+}
+
+td, th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border: 1px solid #ddd;
+}
+
+
+.row {
+    margin: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+input, textarea {
+    padding: 0 10px;
+    height: 30px;
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    margin: 10px auto;
+    display: block;
+}
+
+
+table a, .pagination a  {
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 0px 3px;
+    text-decoration: none;
+}
+
+.pagination {
+    margin: 20px auto;
+    display: block;
+}
